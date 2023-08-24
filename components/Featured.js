@@ -56,7 +56,7 @@ const ButtonsWrapper = styled.div`
   margin-top: 25px;
 `;
 
-export default function Featured({ _id }) {
+export default function Featured({ _id, title, description }) {
   const { addProduct } = useContext(CartContext);
 
   return (
@@ -65,8 +65,8 @@ export default function Featured({ _id }) {
         <ColumnsWrapper>
           <Column>
             <div>
-              <Title>{product.title}</Title>
-              <Desc>{product.description}</Desc>
+              <Title>{title}</Title>
+              <Desc>{description}</Desc>
               <ButtonsWrapper>
                 <ButtonLink href={"/product/" + _id} outline={1} white={1}>
                   Read more
