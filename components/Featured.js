@@ -56,22 +56,29 @@ const ButtonsWrapper = styled.div`
   margin-top: 25px;
 `;
 
-export default function Featured({ _id, title, description }) {
-  const { addProduct } = useContext(CartContext);
+export default function Featured({ product }) {
+  const { addProducts } = useContext(CartContext);
 
+  function addFeaturedToCart() {
+    addProducts(product._id);
+  }
   return (
     <Bg>
       <Center>
         <ColumnsWrapper>
           <Column>
             <div>
-              <Title>{title}</Title>
-              <Desc>{description}</Desc>
+              <Title>{product.title}</Title>
+              <Desc>{product.description}</Desc>
               <ButtonsWrapper>
-                <ButtonLink href={"/product/" + _id} outline={1} white={1}>
+                <ButtonLink
+                  href={"/product/" + product._id}
+                  outline={1}
+                  white={1}
+                >
                   Read more
                 </ButtonLink>
-                <Button white onClick={() => addProduct(_id)}>
+                <Button white onClick={addFeaturedToCart}>
                   <CartIcon />
                   Add to cart
                 </Button>

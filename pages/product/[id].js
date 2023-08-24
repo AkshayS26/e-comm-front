@@ -30,7 +30,7 @@ const Price = styled.span`
 `;
 
 export default function ProductPage({ product }) {
-  const { addProduct } = useContext(CartContext);
+  const { addProducts } = useContext(CartContext);
   return (
     <>
       <Header />
@@ -47,7 +47,7 @@ export default function ProductPage({ product }) {
                 <Price>${product.price}</Price>
               </div>
               <div>
-                <Button primary onClick={() => addProduct(product._id)}>
+                <Button primary onClick={() => addProducts(product._id)}>
                   <CartIcon />
                   Add to cart
                 </Button>
