@@ -190,7 +190,7 @@ export default function CartPage() {
                   <tr>
                     <td></td>
                     <td></td>
-                    <td>Rs{total}</td>
+                    <td>Rs.{total}</td>
                   </tr>
                 </tbody>
               </Table>
