@@ -181,7 +181,7 @@ export default function CartPage() {
                         </Button>
                       </td>
                       <td>
-                        $
+                        Rs.
                         {cartProducts.filter((id) => id === product._id)
                           .length * product.price}
                       </td>
@@ -190,7 +190,7 @@ export default function CartPage() {
                   <tr>
                     <td></td>
                     <td></td>
-                    <td>${total}</td>
+                    <td>Rs{total}</td>
                   </tr>
                 </tbody>
               </Table>
