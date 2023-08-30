@@ -32,7 +32,7 @@ const Popup = ({ onClose }) => {
       <CloseButton onClick={onClose}>X</CloseButton>
       <Content>
         Checkout admin dashboard demo&nbsp;
-        <a href="https://e-comm-admin-tau.vercel.app/" target="_blank">
+        <a href="https://www.youtube.com/watch?v=EiSnWGlXK3w&ab_channel=AkshaySawant" target="_blank">
           here
         </a>
       </Content>
